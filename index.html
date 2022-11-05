@@ -992,7 +992,6 @@ body{
         <div class="modal-body">
             <p>There are only 3 tokens will be shown if you haven't completed any mission.</p>
             <p>In order to get all new tokens today, please complete at least one mission.
-                <br> After completed a mission, please waiting for 30 seconds.</p>
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
@@ -1168,7 +1167,7 @@ setTimeout(function() {$('#myModal').modal('hide');}, 10000);
         if(!hasLoaded) {
             setTimeout(function() {
                 getNewTokensExact();
-            }, 2000);
+            }, 5000);
         }
         hasLoaded = true;
     })
