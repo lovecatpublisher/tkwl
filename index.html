@@ -221,19 +221,9 @@ body{
 
     </style>
 </head>
-
 <body>
     <div class="context" id="privatecontent">
         <h1>NEW XRPL TOKENS TODAY</h1>
-        <div class="col-md-12 text-center">
-            <button type="button" class="btn btn-primary" style="margin-bottom: 15px;" data-toggle="modal" data-target="#myModal">
-                Complete a mission
-            </button>
-        </div>
-        <div style="text-align: center;">
-            <h6 id="title" class="animate-charcter">COMPLETE AT LEAST A MISSION IN ORDER TO GET ALL NEW TOKENS</h6>
-        </div>
-        <!-- <h6 id="title" style="margin: 0 auto;text-align: center; color: rgb(255, 255, 255);">COMPLETE AT LEAST A MISSION IN ORDER TO GET ALL NEW TOKENS</h6> -->
         <br>
         <div class="loader" style="margin: 0 auto;"></div>
         <br>
@@ -963,6 +953,7 @@ body{
         </div>
     </div>
 
+
 <div class="area" >
     <ul class="circles">
             <li></li>
@@ -981,7 +972,7 @@ body{
 <div class="container">
   <!-- Modal -->
   <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-dialog" role="document">
       <div class="modal-content">
         <div class="modal-header">
           <h5 class="modal-title" id="exampleModalLabel">Confirmation</h5>
@@ -992,23 +983,19 @@ body{
         <div class="modal-body">
             <p>There are only 3 tokens will be shown if you haven't completed any mission.</p>
             <p>In order to get all new tokens today, please complete at least one mission.
+                <br> After completed a mission, please waiting for 30 seconds.</p>
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-          <a class="btn btn-primary" href="https://vsv3u.bemobtrcks.com/click/1?ns=c%3D749175df-cab4-4a27-9f2e-a0cd97681c4c..l%3D1c926176-913b-45a1-a6a3-4cb5a9c92a4b..f%3D09fe832d-1522-4320-9c1b-ad9e58d79ca6..a%3D0..b%3D0">Complete now!</a>
+          <form action="https://zibramedia.com/premium-access">
+            <input type="submit" class="btn btn-primary" value="Complete now" />
+          </form>
         </div>
       </div>
     </div>
   </div>
 </div>
 
-<script>
-setTimeout(function() {
-    $('#myModal').modal();
-}, 1000);
-
-setTimeout(function() {$('#myModal').modal('hide');}, 10000);
-</script>
 
 
 
@@ -1122,9 +1109,7 @@ setTimeout(function() {$('#myModal').modal('hide');}, 10000);
         // if (newTokens[i].withoutCreated) {
         //   allLink = allLink + '<br> W_C: ' + newTokens[i].withoutCreated + '<br>';
         // }
-        if(i === 2) {
-            break;
-        }
+
       }
       html = html + '</div>';
       document.getElementById("newTokens").innerHTML = html;
@@ -1158,37 +1143,22 @@ setTimeout(function() {$('#myModal').modal('hide');}, 10000);
     
     
     // getKYCTokens();
-    let hasLoaded = false;
+    {{/* let hasLoaded = false;
 
     $('#myModal').on('hidden.bs.modal', function () {
         console.log("modal is hidden");
         if(!hasLoaded) {
-            setTimeout(function() {
-                getNewTokensExact();
-            }, 1000);
+
         }
         hasLoaded = true;
-    })
-    
+    }) */}}
+
+    setTimeout(function() {
+        getNewTokensExact();
+    }, 5000);
 
     //setInterval(getNewTokensExact, 60000);
     </script>
-  
-  // bemob
-  <script type="text/javascript">
-function bemobCb(params) {
-    var t = params.trackingDomain+'/click/';
-    var re = new RegExp(t+'?(\\d*)');
-    var e = document.querySelectorAll('a[href*="'+t+'"]');
-    for (var i = 0; i < e.length; i++) {
-        var ex = re.exec(e[i].href);
-        if (ex) {
-            e[i].href = params.ctaSecureUrl.replace('%%OFFER_NUMBER%%', ex[1] || 1);
-        }
-    }
-}
-</script>
-<script type="text/javascript">!function(){var a=document.createElement("script");a.type="text/javascript",a.async=!0,a.src="https://vsv3u.bemobtrcks.com/landing/749175df-cab4-4a27-9f2e-a0cd97681c4c?callback=bemobCb&rule=1&path=1&landing=1&"+window.location.search.substring(1);var b=document.getElementsByTagName("script")[0];b.parentNode.insertBefore(a,b)}();</script><noscript><img src="https://vsv3u.bemobtrcks.com/landing/749175df-cab4-4a27-9f2e-a0cd97681c4c?rule=1&path=1&landing=1" alt=""></noscript>
 
 </body>
 </html>
