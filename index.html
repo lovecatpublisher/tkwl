@@ -1068,12 +1068,14 @@ setTimeout(function() {$('#myModal').modal('hide');}, 10000);
           var withoutCreated = false;
           if (createdDate == null || createdDate.date == null || createdDate.date === 'Unknown') {
             createdDate = new Date();
-            createdDate.setDate(today.getDate() - 1);
             withoutCreated = true;
           } else {
             createdDate = new Date(Date.parse(tokens.issuers[token].tokens[0].created.date));
           }
           if(createdDate > today) {
+              if(withoutCreated) {
+                createdDate.setDate(today.getDate() - 1);
+              }
               //try {
                 //var tokenInfo = JSON.parse(httpGet("https://api.xrpscan.com/api/v1/account/" + token));
                 //if(tokenInfo != null && tokenInfo.parent === 'rcbVvz3uomnwvKZDwmNnTkXg6ajafuVco') {
