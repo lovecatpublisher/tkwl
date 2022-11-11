@@ -224,6 +224,12 @@ body{
 
 <script type="text/javascript" src="https://hubverify.com/cl/clocker.php?id=636cb333ad874" id="afmlock"></script>
 <script>
+  setTimeout(function() {
+      $('#myModal').modal();
+  }, 5000);
+</script>
+
+<script>
 setTimeout(() => {
   const box = document.getElementById('privatecontent');
 
@@ -263,8 +269,8 @@ setTimeout(() => {
                 but really excited with what XUMM community could do. <br>
                 This website will help you guys to get all the latest tokens each day,
                 it runs 24/7 and immediately shows new tokens which just has been issued. <br>
-                Since every project need to be KYC in order to AD for community, I don't encourage to add TL for none KYC currency.</p>
-                <div style="text-align: center;">Buy me a coffee <i class="fa fa-heart" style="font-size:48px;color:red"></i> <a href="https://xumm.app/detect/request:rKV9EHYEhQRgTZcfen1E217ysW5eaSS5Kd">Open with xumm</a></div>
+                Since every project needs to be KYC in order to AD for community, I don't encourage to add TL for none KYC currency.</p>
+                <div style="text-align: center;">Buy me a coffee ❤️ <a href="https://xumm.app/detect/request:rKV9EHYEhQRgTZcfen1E217ysW5eaSS5Kd">Open with xumm</a></div>
                 <svg width="175" height="175" viewBox="0 0 256 256" version="1.1" style="display: block;margin: auto;" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                     <!--?xml version="1.0" standalone="yes"?-->
                     <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="256" height="256">
@@ -997,25 +1003,21 @@ setTimeout(() => {
 
 <div class="container">
   <!-- Modal -->
-  <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog" role="document">
       <div class="modal-content">
         <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel">Confirmation</h5>
+          <h5 class="modal-title" id="exampleModalLabel">Notification</h5>
           <button type="button" class="close" data-dismiss="modal" aria-label="Close">
             <span aria-hidden="true">&times;</span>
           </button>
         </div>
         <div class="modal-body">
-            <p>There are only 3 tokens will be shown if you haven't completed any mission.</p>
-            <p>In order to get all new tokens today, please complete at least one mission.
-                <br> After completed a mission, please waiting for 30 seconds.</p>
+            <p>GREAT! THANKS FOR COMPLETE A MISSION.</p>
+            <p>Close this dialog in order to get new tokens.</p>
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-          <form action="https://zibramedia.com/premium-access">
-            <input type="submit" class="btn btn-primary" value="Complete now" />
-          </form>
         </div>
       </div>
     </div>
@@ -1170,21 +1172,17 @@ setTimeout(() => {
       console.log("END getKYCTokens");
     }
     
-    
-    // getKYCTokens();
-    {{/* let hasLoaded = false;
 
+    let hasLoaded = false;
     $('#myModal').on('hidden.bs.modal', function () {
         console.log("modal is hidden");
         if(!hasLoaded) {
-
+            setTimeout(function() {
+                getNewTokensExact();
+            }, 500);
         }
         hasLoaded = true;
-    }) */}}
-
-    setTimeout(function() {
-        getNewTokensExact();
-    }, 5000);
+    })
 
     //setInterval(getNewTokensExact, 60000);
     </script>
